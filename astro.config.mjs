@@ -8,11 +8,4 @@ export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
   integrations: [react(), keystatic()],
-  vite: {
-    resolve: {
-      alias: {
-        'react-dom/server': 'react-dom/server.edge'
-      }
-    }
-  }
 });

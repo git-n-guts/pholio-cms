@@ -75,7 +75,9 @@ const cityFields = {
 };
 
 export default config({
-  storage: { kind: 'cloud' },
+  storage: import.meta.env.DEV
+    ? { kind: 'local' }
+    : { kind: 'cloud' },
   cloud: {
     project: 'pholio-cms/pholio-cms',
   },
