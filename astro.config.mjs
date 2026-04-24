@@ -5,6 +5,7 @@ import keystatic from '@keystatic/astro';
 
 export default defineConfig({
   site: 'https://admin.pholio.click',
+  output: 'server',
   adapter: cloudflare(),
   integrations: [react(), keystatic()],
 });
