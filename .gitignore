@@ -1,0 +1,7 @@
+_bmad/
+_bmad-output/
+.claude/
+dist/
+node_modules/
+.astro/
+src/content/
