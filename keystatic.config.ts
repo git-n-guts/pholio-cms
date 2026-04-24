@@ -54,6 +54,8 @@ const questionFields = {
   heroImageAlt: fields.text({ label: 'Hero Image Alt Text' }),
 };
 
+// Cities use the filename as slug (slugField: 'name').
+// The Zod schema in pholio-website does not define a 'slug' field.
 const cityFields = {
   name: fields.text({ label: 'Name' }),
   region: fields.text({ label: 'Region' }),
@@ -89,6 +91,8 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         ...questionFields,
+        // This content field is for CMS editing only.
+        // The Zod schema in pholio-website does not define it — Astro parses it automatically.
         content: fields.document({
           label: 'Content',
           formatting: true,
@@ -106,6 +110,8 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         ...questionFields,
+        // This content field is for CMS editing only.
+        // The Zod schema in pholio-website does not define it — Astro parses it automatically.
         content: fields.document({
           label: 'Content',
           formatting: true,
@@ -123,6 +129,8 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         ...cityFields,
+        // This content field is for CMS editing only.
+        // The Zod schema in pholio-website does not define it — Astro parses it automatically.
         content: fields.document({
           label: 'Content',
           formatting: true,
