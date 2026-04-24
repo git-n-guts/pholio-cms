@@ -77,7 +77,7 @@ const cityFields = {
 export default config({
   storage: { kind: 'cloud' },
   cloud: {
-    project: 'pholio-cms/pholio-website',
+    project: 'pholio-cms/pholio-cms',
   },
   collections: {
     questionsEn: collection({
